@@ -41,19 +41,19 @@ models:
     staging:
       +materialized: table
       +database: |
-        {%- if target.name == 'default' -%} dev_jfm_silver_db
-        {%- elif target.name == 'dev' -%} dev_jfm_silver_db
-        {%- elif target.name == 'pre' -%} pre_jfm_silver_db
-        {%- elif target.name == 'pro' -%} pro_jfm_silver_db
-        {%- endif -%} 
+        {%- if  target.name == "default" -%} dev_jfm_silver_db
+        {%- elif target.name == "dev"  -%} dev_jfm_silver_db
+        {%- elif target.name == "pre"  -%} pre_jfm_silver_db
+        {%- else -%} pro_jfm_silver_db
+        {%- endif -%}
       +schema: silver
     
     marts:
       +materialized: table
       +database: |
-        {%- if target.name == 'default' -%} dev_jfm_gold_db
-        {%- elif target.name == 'dev' -%} dev_jfm_gold_db
-        {%- elif target.name == 'pre' -%} pre_jfm_gold_db
-        {%- elif target.name == 'pro' -%} pro_jfm_gold_db
-        {%- endif -%} 
+        {%- if  target.name == "default" -%} dev_jfm_gold_db
+        {%- elif target.name == "dev"  -%} dev_jfm_gold_db
+        {%- elif target.name == "pre"  -%} pre_jfm_gold_db
+        {%- else -%} pro_jfm_gold_db
+        {%- endif -%}
       +schema: gold
