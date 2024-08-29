@@ -4,5 +4,5 @@ select
     p.producto,
     p.fecha_pedido
 
-from {{ source('sql_server', 'usuarios') }} u inner join {{ source('sql_server', 'pedidos') }} p
+from {{ ref('usuarios') }} u inner join {{ ref('pedidos') }} p
     on u.usuario_id = p.usuario_id
