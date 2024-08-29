@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: sql_server
+    database: dev_jfm_bronze_db  
+    schema: sql_server  
+    tables:
+      - name: usuarios
+      - name: pedidos
