@@ -36,6 +36,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 dbt-cloud:
+  project-id: 379090
   defer-env-id: '326992'
 
 models:
