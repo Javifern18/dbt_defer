@@ -37,7 +37,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 dbt-cloud:
   project-id: 379090
-  defer-env-id: '326992'
+  defer-env-id: 326992
 
 models:
   my_new_project:
