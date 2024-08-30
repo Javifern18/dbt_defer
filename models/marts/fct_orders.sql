@@ -8,7 +8,8 @@ select
     'defer_test3' as defer_test3,
     'ci_test' as ci_test,
     'ci_test2' as ci_test2,
-    'ci_test3' as ci_test3    
+    'ci_test3' as ci_test3,
+    'ci_test4' as ci_test4       
 
 from {{ ref('usuarios') }} u inner join {{ ref('pedidos') }} p
     on u.usuario_id = p.usuario_id
