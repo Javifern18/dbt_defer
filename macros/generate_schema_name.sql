@@ -7,13 +7,9 @@
 
     {%- else -%}
 
-        {%- if target.name == 'default' -%}
+        {%- if target.name in ['default','ci'] -%}
         
             {{ default_schema }}_{{ custom_schema_name | trim }}
-
-        {%- elif target.name == 'ci' -%}
-
-            pr_{{ custom_schema_name | trim }}
 
         {%- else -%}
 

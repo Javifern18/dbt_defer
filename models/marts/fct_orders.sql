@@ -6,7 +6,8 @@ select
     'defer_test' as defer_test,
     'defer_test2' as defer_test2,
     'defer_test3' as defer_test3,
-    'ci_test' as ci_test
+    'ci_test' as ci_test,
+    'ci_test2' as ci_test2
 
 from {{ ref('usuarios') }} u inner join {{ ref('pedidos') }} p
     on u.usuario_id = p.usuario_id
