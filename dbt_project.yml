@@ -46,6 +46,7 @@ models:
       +materialized: table
       +database: |
         {%- if  target.name == "default" -%} dev_jfm_silver_db
+        {%- elif target.name == "ci"  -%} dev_jfm_silver_db
         {%- elif target.name == "dev"  -%} dev_jfm_silver_db
         {%- elif target.name == "pre"  -%} pre_jfm_silver_db
         {%- else -%} pro_jfm_silver_db
@@ -56,6 +57,7 @@ models:
       +materialized: table
       +database: |
         {%- if  target.name == "default" -%} dev_jfm_gold_db
+        {%- elif target.name == "ci"  -%} dev_jfm_gold_db
         {%- elif target.name == "dev"  -%} dev_jfm_gold_db
         {%- elif target.name == "pre"  -%} pre_jfm_gold_db
         {%- else -%} pro_jfm_gold_db
